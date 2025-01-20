@@ -9,6 +9,7 @@ in
 {
   imports = [
     self.nixosModules.common
+    self.darwinModules.homebrew
   ];
 
   security = {
