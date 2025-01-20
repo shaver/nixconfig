@@ -1,7 +1,7 @@
-{ root, pkgs, inputs, nix-homebrew, homebrew, homebrew-core, homebrew-cask, homebrew-bundle, ... }:
+{ pkgs, inputs, nix-homebrew, homebrew-core, homebrew-cask, homebrew-bundle, ... }:
 
 {
-  root.inputs.nix-homebrew = {
+  nix-homebrew = {
     enable = true;
     enableRosetta = true;
     user = "shaver";
