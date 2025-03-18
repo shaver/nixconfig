@@ -12,7 +12,7 @@ in
   ];
 
   nixpkgs.hostPlatform = "aarch64-darwin";
-  networking.hostName = "stebe";
+  networking.hostName = "shaver-mbp";
 
   # For home-manager to work.
   # https://github.com/nix-community/home-manager/issues/4026#issuecomment-1565487545

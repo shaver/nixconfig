@@ -10,6 +10,7 @@ in
   imports = [
     self.nixosModules.common
     self.darwinModules.homebrew
+    self.darwinModules.aerospace
   ];
 
   security = {
@@ -192,7 +193,7 @@ in
 
   power = {
     restartAfterFreeze = true;
-    restartAfterPowerFailure = true;
+    # restartAfterPowerFailure = true; # not supported on laptop, sigh
   };
 
   networking.wakeOnLan.enable = true;
