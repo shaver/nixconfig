@@ -13,12 +13,11 @@ in
     self.darwinModules.aerospace
   ];
 
-  security = {
-    pam.enableSudoTouchIdAuth = true; # Use TouchID for `sudo` authentication
-  };
+  security.pam.services.sudo_local.touchIdAuth = true; # Use TouchID for `sudo` authentication
 
   # These users can add Nix caches.
   nix.settings.trusted-users = [ "root" "shaver" ];
+  ids.gids.nixbld = 350;
 
   environment = {
     systemPackages = with pkgs; [
@@ -73,10 +72,10 @@ in
       };
 
       controlcenter = {
-        Display = true; # show Displays in menu bar
-        FocusModes = true; # show Focus control in menu bar
-        Sound = true; # show Sound control in menu bar
-        BatteryShowPercentage = true; # show battery percentage
+        Display = true;
+        Sound = true;
+        BatteryShowPercentage = false;
+        FocusModes = false;
       };
 
       screencapture = {
