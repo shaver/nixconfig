@@ -5,11 +5,11 @@ let
 in
 {
   homebrew = {
+    enable = true;
     casks = [
       "discord"
       "kitty"
       "alacritty"
     ];
   };
-
 }
