@@ -93,8 +93,8 @@ in
     };
 
     keyboard = {
-      # enableKeyMapping = true;
-      # remapCapsLockToControl = true;
+      enableKeyMapping = true;
+      remapCapsLockToEscape = true;
     };
 
     #    activationScripts.postActivation.text = ''
