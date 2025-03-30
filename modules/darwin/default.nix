@@ -24,6 +24,13 @@ in
       pam-watchid
     ];
     shells = [ pkgs.zsh ];
+
+    # have to force this config globally, see
+    # https://stackoverflow.com/questions/79371917/direnv-printing-environment-diff-even-with-hide-env-diff-true/79543570#79543570
+    etc."direnv/direnv.toml".text = ''
+      [global]
+      hide_env_diff = true
+    '';
   };
 
   # Configure macOS system
