@@ -34,6 +34,11 @@ in
         alt-3 = "workspace 3";
         alt-4 = "workspace 4";
         alt-5 = "workspace 5";
+        alt-6 = "workspace 6";
+        alt-7 = "workspace 7";
+        alt-8 = "workspace 8";
+        alt-9 = "workspace 9";
+        alt-0 = "workspace 10";
 
         # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
         alt-shift-1 = "move-node-to-workspace 1";
@@ -41,9 +46,17 @@ in
         alt-shift-3 = "move-node-to-workspace 3";
         alt-shift-4 = "move-node-to-workspace 4";
         alt-shift-5 = "move-node-to-workspace 5";
+        alt-shift-6 = "move-node-to-workspace 6";
+        alt-shift-7 = "move-node-to-workspace 7";
+        alt-shift-8 = "move-node-to-workspace 8";
+        alt-shift-9 = "move-node-to-workspace 9";
+        alt-shift-0 = "move-node-to-workspace 10";
 
         # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
         alt-tab = "workspace-back-and-forth";
+
+        # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-monitor
+        alt-shift-backtick = [ "move-node-to-monitor --wrap-around next" ];
 
         # See: https://nikitabobko.github.io/AeroSpace/commands#mode
         alt-shift-semicolon = "mode service";
@@ -66,7 +79,24 @@ in
         down = "volume down";
         up = "volume up";
         shift-down = [ "volume set 0" "mode main" ];
+
+        # See https://nikitabobko.github.io/AeroSpace/commands#balance-sizes
+        alt-shift-equal = [ "balance-sizes" ];
       };
+
+      workspace-to-monitor-force-assignment = { 
+        "1" = "AW3423DWF";
+        "2" = "AW3423DWF";
+        "3" = "AW3423DWF";
+        "4" = "AW3423DWF";
+        "5" = "AW3423DWF";
+        "6" = "Dell AW3420DW";
+        "7" = "Dell AW3420DW";
+        "8" = "Dell AW3420DW";
+        "9" = "Dell AW3420DW";
+        "10"= "Dell AW3420DW";
+      };
+
     };
   };
 }
