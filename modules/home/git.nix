@@ -1,6 +1,6 @@
 { ... }:
 {
-  # https://nixos.asia/en/git
+# https://nixos.asia/en/git
   programs = {
     git = {
       enable = true;
@@ -13,10 +13,19 @@
       extraConfig = {
         init.defaultBranch = "main";
         push.autoSetupRemote = "true";
-        # pull.rebase = "false";
+        branch.autoSetupRebase = "always";
+        push.default = "current";
+        pull.rebase = "true";
+        url."git@github.com:fastly".insteadOf = "https://github.com/fastly";
+        url."git@github.com:signalsciences".insteadOf = "https://github.com/signalsciences";
       };
+      includes = [{
+        condition = "gitdir:~/src/**";
+        contents = {
+          user.email = "mike.shaver@fastly.com";
+        };
+      }];
     };
     lazygit.enable = true;
   };
-
 }
