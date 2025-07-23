@@ -88,7 +88,7 @@ in
       screencapture = {
         location = "/Users/shaver/Screenshots"; # save screenshot files here
         target = "clipboard"; # default screenshot to clipboard
-        disable-shadow = false; # no shadow border on screenshots
+        disable-shadow = true; # no shadow border on screenshots
         include-date = true; # date in filenames
         type = "png"; # save screenshots as PNG
       };
