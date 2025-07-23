@@ -14,8 +14,15 @@
       enable = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
-      envExtra = ''
-        # Custom zshrc goes here
+      initExtra = ''
+# Added by eng-bootstrap 2025-05-07 16:12:51
+export PATH="$PATH:/usr/local/node/bin"
+
+# Added by eng-bootstrap 2025-05-07 16:14:11
+source ~/.bash_sigsci
+
+# Added by eng-bootstrap 2025-05-07 16:21:57
+export PATH="$PATH:/usr/local/go/bin"
       '';
     };
 
