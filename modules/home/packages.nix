@@ -26,9 +26,16 @@
     # work.
     less
 
-    go
-
     fastly
+    awscli2
+
+    # for building sigsci-edge
+    go-junit-report
+    golangci-lint
+
+    # fastly tools
+    rclone
+    s3cmd
   ];
 
   # Programs natively supported by home-manager.
