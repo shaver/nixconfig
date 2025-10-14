@@ -12,7 +12,8 @@ in
   ];
 
   nixpkgs.hostPlatform = "aarch64-darwin";
-  networking.hostName = "shaver-mbp";
+  # has to match my serial number to make IT's life easier, I guess :(
+  # networking.hostName = "shaver-mbp";
 
   # For home-manager to work.
   # https://github.com/nix-community/home-manager/issues/4026#issuecomment-1565487545
