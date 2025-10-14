@@ -1,4 +1,9 @@
 { pkgs, ... }:
+let
+  gcloud = pkgs.google-cloud-sdk.withExtraComponents( with pkgs.google-cloud-sdk.components; [
+    gke-gcloud-auth-plugin
+  ]);
+in
 {
   # Nix packages to install to $HOME
   #
@@ -26,8 +31,11 @@
     # work.
     less
 
+    # TODO: factor these out so I don't install them on my personal machines
     fastly
     awscli2
+    gcloud 
+    gnupg
 
     # for building sigsci-edge
     go-junit-report
@@ -83,6 +91,13 @@
       settings.extensions = [ "yusukebe/gh-markdown-preview" ];
     };
     gh-dash.enable = true;
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+      viAlias = true;
+      vimAlias = true;
+      vimdiffAlias = true;
+    };
 
   };
 }
