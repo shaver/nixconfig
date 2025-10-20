@@ -11,6 +11,8 @@ in
     self.darwinModules.default
   ];
 
+  system.primaryUser = "shaver";
+
   nixpkgs.hostPlatform = "aarch64-darwin";
   # has to match my serial number to make IT's life easier, I guess :(
   # networking.hostName = "shaver-mbp";
