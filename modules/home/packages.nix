@@ -91,13 +91,6 @@ in
       settings.extensions = [ "yusukebe/gh-markdown-preview" ];
     };
     gh-dash.enable = true;
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-      viAlias = true;
-      vimAlias = true;
-      vimdiffAlias = true;
-    };
-
   };
+
 }
