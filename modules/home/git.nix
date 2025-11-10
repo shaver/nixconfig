@@ -4,13 +4,14 @@
   programs = {
     git = {
       enable = true;
-      userName = "Mike Shaver";
-      userEmail = "shaver@off.net";
-      ignores = [ "*~" "*.swp" ];
-      aliases = {
-        ci = "commit";
-      };
-      extraConfig = {
+      settings = {
+        user = {
+          name = "Mike Shaver";
+          email = "shaver@off.net";
+        };
+        alias = {
+          ci = "commit";
+        };
         init.defaultBranch = "main";
         push.autoSetupRemote = "true";
         branch.autoSetupRebase = "always";
@@ -19,6 +20,7 @@
         url."git@github.com:fastly".insteadOf = "https://github.com/fastly";
         url."git@github.com:signalsciences".insteadOf = "https://github.com/signalsciences";
       };
+      ignores = [ "*~" "*.swp" ];
       includes = [{
         condition = "gitdir:~/src/**";
         contents = {
