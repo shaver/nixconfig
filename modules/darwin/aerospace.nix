@@ -81,20 +81,20 @@ in
         shift-down = [ "volume set 0" "mode main" ];
 
         # See https://nikitabobko.github.io/AeroSpace/commands#balance-sizes
-        alt-shift-equal = [ "balance-sizes" ];
+        equal = [ "balance-sizes" "mode main"];
       };
 
       workspace-to-monitor-force-assignment = { 
-        "1" = "AW3423DWF";
-        "2" = "AW3423DWF";
-        "3" = "AW3423DWF";
-        "4" = "AW3423DWF";
-        "5" = "AW3423DWF";
-        "6" = "Dell AW3420DW";
-        "7" = "Dell AW3420DW";
-        "8" = "Dell AW3420DW";
-        "9" = "Dell AW3420DW";
-        "10"= "Dell AW3420DW";
+        "1" = "main";
+        "2" = "main";
+        "3" = "main";
+        "4" = "main";
+        "5" = "main";
+        "6" = "secondary";
+        "7" = "secondary";
+        "8" = "secondary";
+        "9" = "secondary";
+        "10"= "secondary";
       };
 
     };
