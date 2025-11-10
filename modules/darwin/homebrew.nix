@@ -7,9 +7,10 @@ in
   homebrew = {
     enable = true;
     casks = [
-      "discord"
-      "kitty"
       "alacritty"
+      "discord"
+      "iterm2"
+      "kitty"
     ];
   };
 }
