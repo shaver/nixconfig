@@ -78,6 +78,19 @@ in
       # `jj`
       enable = true;
       ediff = true;
+      settings = {
+          user = {
+            email = "shaver@off.net";
+            name = "Mike Shaver";
+          };
+          ui = {
+            diff-editor = "vimdiff";
+            default-command = "log";
+          };
+          merge-tools.vimdiff = {
+            diff-invocation-mode = "file-by-file";
+          };
+      };
     };
     nh = {
       enable = true;
