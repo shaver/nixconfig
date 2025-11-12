@@ -15,6 +15,15 @@ in
       vimdiffAlias = true;
       withNodeJs = true;
       withPython3 = true;
+      extraPackages = with pkgs; [
+        python3
+        luarocks
+        tree-sitter
+        imagemagick
+        tectonic
+        ghostscript
+        mermaid-cli
+      ];
   };
 
   # use the "raw" nvim config from this repo
