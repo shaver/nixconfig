@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{ pkgs
+, lib
+, config
+, ...
+}:
 let
   gcloud = pkgs.google-cloud-sdk.withExtraComponents( with pkgs.google-cloud-sdk.components; [
     gke-gcloud-auth-plugin
@@ -74,28 +78,10 @@ in
       enable = true;
       shortcut = "a";
     };
-    jujutsu = {
-      # `jj`
-      enable = true;
-      ediff = true;
-      settings = {
-          user = {
-            email = "shaver@off.net";
-            name = "Mike Shaver";
-          };
-          ui = {
-            diff-editor = "vimdiff";
-            default-command = "log";
-          };
-          merge-tools.vimdiff = {
-            diff-invocation-mode = "file-by-file";
-          };
-      };
-    };
     nh = {
       enable = true;
       clean.enable = true;
-      flake = "/Users/shaver/nixconfig"; # default flake for `os switch` etc.
+      flake = "${config.home.homeDirectory}/nixconfig"; # default flake for `os switch` etc.
     };
     htop.enable = true;
     gh = {

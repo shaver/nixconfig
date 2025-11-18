@@ -1,0 +1,14 @@
+[merge-tools.ediff]
+merge-args = ["$left", "$right", "$base", "$output"]
+program = "/nix/store/9945z6hbbscg3fiaslrjzmb26ml9k8r1-emacs-ediff/bin/emacs-ediff"
+
+[merge-tools.vimdiff]
+diff-invocation-mode = "file-by-file"
+
+[ui]
+default-command = "log"
+diff-editor = "vimdiff"
+
+[user]
+email = "shaver@off.net"
+name = "Mike Shaver"
