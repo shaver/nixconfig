@@ -1,14 +1,20 @@
-[merge-tools.ediff]
-merge-args = ["$left", "$right", "$base", "$output"]
-program = "/nix/store/9945z6hbbscg3fiaslrjzmb26ml9k8r1-emacs-ediff/bin/emacs-ediff"
-
 [merge-tools.vimdiff]
 diff-invocation-mode = "file-by-file"
 
 [ui]
-default-command = "log"
+default-command = "status"
 diff-editor = "vimdiff"
+
+[colors]
+"diff token" = { underline = false }
 
 [user]
 email = "shaver@off.net"
 name = "Mike Shaver"
+
+# This is the most ridiculous syntax
+[[--scope]]
+--when.repositories = ["~/src/fastly", "~/src/fastly-def", "~/src/signalsciences"]
+[--scope.user]
+email = "mike.shaver@fastly.com"
+
