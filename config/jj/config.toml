@@ -18,3 +18,12 @@ name = "Mike Shaver"
 [--scope.user]
 email = "mike.shaver@fastly.com"
 
+# `tug` from Joe 
+[revset-aliases]
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
+
+[aliases]
+#tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "@"]
+tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "closest_pushable(@)"]
+
