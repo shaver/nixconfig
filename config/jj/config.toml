@@ -18,9 +18,18 @@ name = "Mike Shaver"
 [--scope.user]
 email = "mike.shaver@fastly.com"
 
-# `tug` from Joe 
+# `tug` and explanation from Joe 
 [revset-aliases]
+# closest_bookmark:
+#  * `::to` means all the ancestors of `to` including it (always `@` for `tug`)
+#  * `bookmarks()` are all the changes that have bookmarks associated with them
+#  * `&` is set intersection
+#  * `heads()` are the changes with no descendants
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+# closest_pushable(to):
+# * `mutable()`, commits that can be modified (so not main@origin)
+# * `~description(exact:"")`, any change that doesn't have a blank commit message
+# * `(~empty() | merges())`, union of non-empty changes and merges
 'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
 
 [aliases]
