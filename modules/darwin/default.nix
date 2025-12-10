@@ -8,12 +8,14 @@ let
 in
 {
   imports = [
-    self.nixosModules.common
+    self.darwinModules.sudo
     self.darwinModules.homebrew
     self.darwinModules.aerospace
   ];
 
   security.pam.services.sudo_local.touchIdAuth = true; # Use TouchID for `sudo` authentication
+
+  nix.enable = false; # conflicts with Determinate
 
   # These users can add Nix caches.
   nix.settings.trusted-users = [ "root" "shaver" ];
@@ -22,6 +24,7 @@ in
   environment = {
     systemPackages = with pkgs; [
       pam-watchid
+      coreutils # for GNU ls mostly
     ];
     shells = [ pkgs.zsh ];
 
