@@ -13,6 +13,8 @@ in
 
   system.primaryUser = "shaver";
 
+  nix.enable = false; # avoid conflict between nix-darwin and determinate
+
   nixpkgs.hostPlatform = "aarch64-darwin";
   networking.hostName = "daltron";
 
