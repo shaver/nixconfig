@@ -1,11 +1,8 @@
 {
   pkgs,
-  config,
+  flake,
   ...
 }:
-let
-  configRepo = "${config.home.homeDirectory}/nixconfig";
-in
 {
   programs.neovim = {
     enable = true;
@@ -30,10 +27,5 @@ in
   };
 
   # use the "raw" nvim config from this repo
-  xdg.configFile = {
-    nvim = {
-      source = config.lib.file.mkOutOfStoreSymlink "${configRepo}/config/nvim";
-      recursive = true;
-    };
-  };
+  xdg.configFile = flake.lib.mk-out-of-store-config "nvim";
 }
