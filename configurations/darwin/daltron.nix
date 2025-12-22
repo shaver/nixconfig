@@ -9,6 +9,7 @@ in
 {
   imports = [
     self.darwinModules.default
+    self.darwinModules.signal
   ];
 
   system.primaryUser = "shaver";
@@ -25,7 +26,7 @@ in
   home-manager = {
     # Automatically move old dotfiles out of the way
     #
-    # Note that home-manager is not very smart, if this backup file already exists it 
+    # Note that home-manager is not very smart, if this backup file already exists it
     # will complain "Existing file .. would be clobbered by backing up". To mitigate this,
     # we try to use as unique a backup file extension as possible.
     backupFileExtension = "hmbckp";
